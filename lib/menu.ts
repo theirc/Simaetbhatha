@@ -32,14 +32,7 @@ export function getMenuItems(
       href: `/articles/${ABOUT_US_ARTICLE_ID}`,
     });
   }
-  categories.forEach(function (category) {
-    if (category.id == '1500002090382')
-      items.push({
-        key: 'services',
-        label: category.name,
-        href: '/#service-map',
-      });
-  });
+
   if (USE_CAT_SEC_ART_CONTENT_STRUCTURE) {
     addMenuItemsCategories(items, categories as CategoryWithSections[]);
   } else {
@@ -73,6 +66,15 @@ function addMenuItemsInformation(
   strings: CustomMenuOverlayStrings,
   categories: ZendeskCategory[]
 ) {
+  categories.forEach(function (category) {
+    if (category.id.toString() == '1500002090382')
+      items.push({
+        key: 'services',
+        label: category.name,
+        href: '/#service-map',
+      });
+  });
+
   if (categories.length > 0) {
     items.push({
       key: 'information',
