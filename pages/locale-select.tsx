@@ -7,13 +7,17 @@ import type { Lang } from '@ircsignpost/signpost-base/dist/src/locale-select-pag
 import Image from 'next/image';
 
 import { SITE_TITLE } from '../lib/constants';
+import logo from '../public/simaet-bhatha-logo.png';
 
 const langs: Lang[] = [
   {
     langShort: 'en-us',
     langLong: 'English',
   },
-  // TODO: Add supported languages.
+  {
+    langShort: 'ar',
+    langLong: 'العربية',
+  },
 ];
 
 /** The locale selection page.
@@ -31,9 +35,11 @@ export default function LocaleSelectPage() {
   return (
     <LocaleSelectPageBase
       siteTitle={SITE_TITLE}
-      message={'Please choose your preferred language'}
+      message={
+        'We provide information about rights, legal procedures, and basic services in Iraq.'
+      }
       langs={langs}
-      image={<span>TODO</span>}
+      image={<Image src={logo} alt="icon" />}
     />
   );
 }
