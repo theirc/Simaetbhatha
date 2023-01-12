@@ -39,14 +39,17 @@ export const COMMON_DYNAMIC_CONTENT_PLACEHOLDERS = [
 export const HOME_PAGE_DYNAMIC_CONTENT_PLACEHOLDERS = [
   // Header banner and social media strings.
   'simaet_bhatha_mission_statement',
+  'simaet_bhatha_information_description',
   'default_banner_social_media_title',
   'default_banner_social_media_description',
   'default_banner_facebook_title',
   'default_banner_messenger_title',
   'default_banner_whatsapp_title',
+  'default_banner_instagram_title',
   'simaet_bhatha_facebook_link',
   'simaet_bhatha_whatsapp_link',
   'simaet_bhatha_messenger_link',
+  'simaet_bhatha_instagram_link',
   'default_share_notification_text',
   // Main body strings.
   'default_information_title',
@@ -104,6 +107,10 @@ export function populateSocialMediaLinks(dynamicContent: {
       title: dynamicContent['default_banner_messenger_title'],
       href: dynamicContent['simaet_bhatha_messenger_link'],
     },
+    instagramLink: {
+      title: dynamicContent['default_banner_instagram_title'],
+      href: dynamicContent['simaet_bhatha_instagram_link'],
+    },
   };
 }
 
@@ -149,7 +156,7 @@ export function populateCategoriesSectionStrings(dynamicContent: {
 }): CardsListStrings {
   return {
     title: dynamicContent['default_information_title'],
-    description: dynamicContent['default_information_description'],
+    description: dynamicContent['simaet_bhatha_information_description'],
   };
 }
 
