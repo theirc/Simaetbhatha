@@ -18,7 +18,6 @@ export interface CustomMenuOverlayStrings extends MenuOverlayStrings {
   about: string;
 }
 
-// TODO Update menu items if needed.
 export function getMenuItems(
   strings: CustomMenuOverlayStrings,
   categories: ZendeskCategory[] | CategoryWithSections[],
@@ -26,11 +25,6 @@ export function getMenuItems(
 ): MenuOverlayItem[] {
   let items: MenuOverlayItem[] = [];
   items.push({ key: 'home', label: strings.home, href: '/' });
-  if (USE_CAT_SEC_ART_CONTENT_STRUCTURE) {
-    addMenuItemsCategories(items, categories as CategoryWithSections[]);
-  } else {
-    addMenuItemsInformation(items, strings, categories as ZendeskCategory[]);
-  }
   if (includeAbout) {
     items.push({
       key: 'about',
@@ -38,6 +32,13 @@ export function getMenuItems(
       href: `/articles/${ABOUT_US_ARTICLE_ID}`,
     });
   }
+
+  if (USE_CAT_SEC_ART_CONTENT_STRUCTURE) {
+    addMenuItemsCategories(items, categories as CategoryWithSections[]);
+  } else {
+    addMenuItemsInformation(items, strings, categories as ZendeskCategory[]);
+  }
+
   return items;
 }
 
@@ -65,6 +66,15 @@ function addMenuItemsInformation(
   strings: CustomMenuOverlayStrings,
   categories: ZendeskCategory[]
 ) {
+  categories.forEach(function (category) {
+    if (category.id.toString() == '1500002090382')
+      items.push({
+        key: 'services',
+        label: category.name,
+        href: '/#service-map',
+      });
+  });
+
   if (categories.length > 0) {
     items.push({
       key: 'information',
