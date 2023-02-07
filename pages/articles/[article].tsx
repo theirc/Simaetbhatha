@@ -265,7 +265,6 @@ export const getStaticProps: GetStaticProps = async ({
             preview: preview ?? false,
             metaTagAttributes: [],
           },
-          revalidate: REVALIDATION_TIMEOUT_SECONDS,
         };
   }
 
@@ -287,6 +286,5 @@ export const getStaticProps: GetStaticProps = async ({
       strings,
       menuOverlayItems,
     },
-    revalidate: REVALIDATION_TIMEOUT_SECONDS,
   };
 };
