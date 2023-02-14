@@ -4,6 +4,7 @@ import { ArticlePageStrings } from '@ircsignpost/signpost-base/dist/src/article-
 import { CategoryStrings } from '@ircsignpost/signpost-base/dist/src/category-page';
 import { CookieBannerStrings } from '@ircsignpost/signpost-base/dist/src/cookie-banner';
 import { ErrorProps } from '@ircsignpost/signpost-base/dist/src/error';
+import { FooterStrings } from '@ircsignpost/signpost-base/dist/src/footer';
 import { HeaderBannerStrings } from '@ircsignpost/signpost-base/dist/src/header-banner';
 import { HomePageStrings } from '@ircsignpost/signpost-base/dist/src/home-page';
 import { CardsListStrings } from '@ircsignpost/signpost-base/dist/src/home-page-cards-list';
@@ -35,6 +36,10 @@ export const COMMON_DYNAMIC_CONTENT_PLACEHOLDERS = [
   'default_last_updated',
   'default_article_reader_title',
   'default_banner_link_share_title',
+  'default_filter_label',
+  'default_most_recent_filter_option',
+  'default_most_popular_filter_option',
+  'default_home_disclaimer',
 ];
 
 export const HOME_PAGE_DYNAMIC_CONTENT_PLACEHOLDERS = [
@@ -73,7 +78,10 @@ export const HOME_PAGE_DYNAMIC_CONTENT_PLACEHOLDERS = [
   'default_service_map_my_location_option',
 ];
 
-export const CATEGORY_PLACEHOLDERS = ['default_select_topic'];
+export const CATEGORY_PLACEHOLDERS = [
+  'default_select_topic',
+  'default_select_subtopic',
+];
 
 export const SECTION_PLACEHOLDERS = ['default_select_topic'];
 
@@ -259,6 +267,7 @@ export function populateHomePageStrings(dynamicContent: {
     cookieBannerStrings: populateCookieBannerStrings(dynamicContent),
     serviceMapStrings: populateServiceMapStrings(dynamicContent),
     searchBarStrings: populateSearchBarStrings(dynamicContent),
+    footerStrings: populateFooterStrings(dynamicContent),
   };
 }
 
@@ -277,6 +286,8 @@ export function populateCategoryStrings(dynamicContent: {
     cookieBannerStrings: populateCookieBannerStrings(dynamicContent),
     selectTopicLabel: getSelectTopicLabel(dynamicContent),
     searchBarStrings: populateSearchBarStrings(dynamicContent),
+    footerStrings: populateFooterStrings(dynamicContent),
+    selectSubTopicLabel: dynamicContent['default_select_subtopic'],
   };
 }
 
@@ -287,6 +298,7 @@ export function populateSectionStrings(dynamicContent: {
     cookieBannerStrings: populateCookieBannerStrings(dynamicContent),
     selectTopicLabel: getSelectTopicLabel(dynamicContent),
     searchBarStrings: populateSearchBarStrings(dynamicContent),
+    footerStrings: populateFooterStrings(dynamicContent),
   };
 }
 
@@ -297,6 +309,7 @@ export function populateCustom404Strings(dynamicContent: {
     errorStrings: generate404ErrorProps(dynamicContent),
     cookieBannerStrings: populateCookieBannerStrings(dynamicContent),
     searchBarStrings: populateSearchBarStrings(dynamicContent),
+    footerStrings: populateFooterStrings(dynamicContent),
   };
 }
 
@@ -310,6 +323,7 @@ export function populateSearchResultsPageStrings(dynamicContent: {
     allResultsTabString: dynamicContent['default_all_results_tab'],
     informationTabString: dynamicContent['default_information_results_tab'],
     servicesTabString: dynamicContent['default_services_results_tab'],
+    footerStrings: populateFooterStrings(dynamicContent),
   };
 }
 
@@ -322,5 +336,24 @@ export function populateArticlePageStrings(dynamicContent: {
     cookieBannerStrings: populateCookieBannerStrings(dynamicContent),
     articleErrorStrings: generateArticleErrorProps(dynamicContent),
     lastUpdatedLabel: getLastUpdatedLabel(dynamicContent),
+    footerStrings: populateFooterStrings(dynamicContent),
+  };
+}
+
+export function populateFooterStrings(dynamicContent: {
+  [key: string]: string;
+}): FooterStrings {
+  return {
+    disclaimerSummary: dynamicContent['default_home_disclaimer'],
+  };
+}
+
+export function populateFilterSelectStrings(dynamicContent: {
+  [key: string]: string;
+}) {
+  return {
+    filterLabel: dynamicContent['default_filter_label'],
+    mostRecent: dynamicContent['default_most_recent_filter_option'],
+    mostPopular: dynamicContent['default_most_popular_filter_option'],
   };
 }
