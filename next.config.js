@@ -1,5 +1,6 @@
 const withLess = require('next-with-less');
 const withPWA = require('next-pwa')({ dest: 'public' });
+const pack = require('./package.json');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -21,6 +22,17 @@ const nextConfig = {
         permanent: true,
       },
     ];
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'signpost-iraq.zendesk.com',
+      },
+    ],
+  },
+  publicRuntimeConfig: {
+    version: pack.dependencies['@ircsignpost/signpost-base'],
   },
 };
 
