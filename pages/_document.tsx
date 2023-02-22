@@ -29,6 +29,10 @@ function Document() {
           id="ze-snippet"
           src="https://static.zdassets.com/ekr/snippet.js?key=37922dda-c8d9-441f-9a01-449297f3bb32"
           async> </script>*/}
+
+        <link rel="manifest" href="/manifest.json" />
+        <link rel="apple-touch-icon" href="/icon.png"></link>
+        <meta name="theme-color" content="#FFB500" />
       </Head>
       <body>
         <Main />
