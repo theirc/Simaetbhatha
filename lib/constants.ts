@@ -13,8 +13,7 @@ export const MAP_DEFAULT_COORDS: LatLngExpression = [33.2232, 43.6793];
 export const REVALIDATION_TIMEOUT_SECONDS: number = 1 * 60 * 60;
 
 // The "about us" article ID.
-//
-export const ABOUT_US_ARTICLE_ID: number = 5650993961117;
+export const ABOUT_US_ARTICLE_ID: number = 10178142062365;
 
 // The information hierary of the website.
 // Set to true for the category -> section -> article hierarchy, similar to that of United for Ukraine.
@@ -36,7 +35,7 @@ export const SECTION_ICON_NAMES: { [key: string]: string } = {
 };
 
 // A list of category IDs that the site should not display.
-export const CATEGORIES_TO_HIDE: number[] = [5651006628765];
+export const CATEGORIES_TO_HIDE: number[] = [];
 // A map from a locale code to Zendesk locale id used for dynamic content translations.
 // https://developer.zendesk.com/api-reference/ticketing/account-configuration/locales/
 // Keep in sync with locales configured in /next.config.js.

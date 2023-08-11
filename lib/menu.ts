@@ -55,7 +55,6 @@ export function getMenuItems(
       href: `/articles/${ABOUT_US_ARTICLE_ID}`,
     });
   }
-
   if (USE_CAT_SEC_ART_CONTENT_STRUCTURE) {
     addMenuItemsCategories(items, categories as CategoryWithSections[]);
   } else {

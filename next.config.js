@@ -47,7 +47,7 @@ module.exports = withPWA(
           'primary-color': '#38393C',
           'secondary-color': '#242629',
           'accent-color': '#FFB500',
-          'info-color': '@accent-color',
+          'info-color': '#FFAC46',
           'alert-info-bg-color': '@accent-color',
           // Override Ant typography.
           'heading-1-size': '3.75rem',
@@ -68,14 +68,14 @@ module.exports = withPWA(
             'linear-gradient(173.7deg, @secondary-color 8.14%, @primary-color 127.84%)',
           'header-banner-text-color': 'white',
           // Set search styles.
-          'search-icon-color': 'white',
+          'search-icon-color': 'black',
           'search-icon-bg-color': '@accent-color',
           // Set card styles.
           'card-padding-base': '16px',
           'home-page-card-icon-color': '#141414',
           // Set cookie banner styles.
           'cookie-banner-text': '#000',
-          'cookie-banner-back': '@accent-color',
+          'cookie-banner-back': '#FFD242',
           'link-color': '#0000ee',
           'link-hover-color': '#0000eea8',
         },

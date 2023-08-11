@@ -141,19 +141,12 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     );
   }
 
-  const aboutUsArticle = await getArticle(
-    currentLocale,
-    ABOUT_US_ARTICLE_ID,
-    getZendeskUrl(),
-    getZendeskMappedUrl(),
-    ZENDESK_AUTH_HEADER
-  );
-  const aboutUsTextHtml = aboutUsArticle ? aboutUsArticle.body : '';
+  const aboutUsTextHtml = '';
 
   const menuOverlayItems = getMenuItems(
     populateMenuOverlayStrings(dynamicContent),
     categories,
-    !!aboutUsArticle
+    true
   );
 
   const footerLinks = getFooterItems(
