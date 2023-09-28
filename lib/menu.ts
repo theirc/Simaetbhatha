@@ -41,27 +41,18 @@ export function getFooterItems(
   return items;
 }
 
+// TODO Update menu items if needed.
 export function getMenuItems(
   strings: CustomMenuOverlayStrings,
-  categories: ZendeskCategory[] | CategoryWithSections[],
-  includeAbout: boolean
+  categories: ZendeskCategory[] | CategoryWithSections[]
 ): MenuOverlayItem[] {
   let items: MenuOverlayItem[] = [];
   items.push({ key: 'home', label: strings.home, href: '/' });
-  if (includeAbout) {
-    items.push({
-      key: 'about',
-      label: strings.about,
-      href: `/articles/${ABOUT_US_ARTICLE_ID}`,
-    });
-  }
-
   if (USE_CAT_SEC_ART_CONTENT_STRUCTURE) {
     addMenuItemsCategories(items, categories as CategoryWithSections[]);
   } else {
     addMenuItemsInformation(items, strings, categories as ZendeskCategory[]);
   }
-
   return items;
 }
 

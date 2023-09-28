@@ -14,10 +14,6 @@ const langs: Lang[] = [
     langShort: 'ar',
     langLong: 'العربية',
   },
-  {
-    langShort: 'en-us',
-    langLong: 'English',
-  },
 ];
 
 /** The locale selection page.
