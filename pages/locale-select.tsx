@@ -32,7 +32,7 @@ export default function LocaleSelectPage() {
     <LocaleSelectPageBase
       siteTitle={SITE_TITLE}
       message={
-        'We provide information about rights, legal procedures, and basic services in Iraq.'
+        'نحن نوفر المعلومات حول الحقوق والإجراءات القانونية والخدمات في العراق'
       }
       langs={langs}
       image={<Image src={logo} alt="icon" />}
