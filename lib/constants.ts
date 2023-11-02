@@ -39,9 +39,12 @@ export const SECTION_ICON_NAMES: { [key: string]: string } = {
 export const CATEGORIES_TO_HIDE: number[] = [5651006628765];
 // A map from a locale code to Zendesk locale id used for dynamic content translations.
 // https://developer.zendesk.com/api-reference/ticketing/account-configuration/locales/
+
+export const MENU_CATEGORIES_TO_HIDE: number[] = [123];
+
 // Keep in sync with locales configured in /next.config.js.
 export const DYNAMIC_CONTENT_LOCALES: { [key: string]: number } = {
-  'en-us': 1, // English locale id
+  en: 1,
   ar: 66, // Arabic locale id
 };
 

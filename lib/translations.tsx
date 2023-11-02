@@ -89,20 +89,13 @@ export const HOME_PAGE_DYNAMIC_CONTENT_PLACEHOLDERS = [
   'default_information_description',
   'default_service_map_title',
   'default_service_map_description',
-  'default_service_map_select_region',
-  'default_service_map_all_regions',
-  'default_service_map_select_city',
-  'default_service_map_all_cities',
-  'default_service_map_select_services',
   'default_services_list_count_of',
   'default_services_list_count_services',
   'default_service_map_map_tab',
   'default_service_map_list_tab',
-  'default_service_map_all_services',
   'DEFAULT_SERVICE_MAP_ALL_REGIONS_OPTION',
   'DEFAULT_SERVICE_MAP_ALL_CITIES_OPTION',
   'DEFAULT_SERVICE_MAP_ALL_CATEGORIES_OPTION',
-  'default_service_map_my_location_option',
   'default_all_services_type_option',
   'default_all_providers_option',
   'default_all_populations_option',
@@ -111,6 +104,10 @@ export const HOME_PAGE_DYNAMIC_CONTENT_PLACEHOLDERS = [
   'default_seach_input_text',
   'default_contact_button_label',
   'default_view_service_label',
+  'default_accessibility_label',
+  'default_populations_label',
+  'default_providers_label',
+  'default_service_type_label',
 ];
 
 export const CATEGORY_PLACEHOLDERS = [
@@ -175,32 +172,23 @@ export function populateServiceMapStrings(dynamicContent: {
   return {
     title: dynamicContent['default_service_map_title'],
     description: dynamicContent['default_service_map_description'],
-    selectRegionTitle: dynamicContent['default_service_map_select_region'],
-    regionDefaultValue: dynamicContent['default_service_map_all_regions'],
-    selectCityTitle: dynamicContent['default_service_map_select_city'],
-    cityDefaultValue: dynamicContent['default_service_map_all_cities'],
-    selectServiceTitle: dynamicContent['default_service_map_all_services'],
-    serviceDefaultValue: dynamicContent['default_service_map_select_services'],
     serviceListStringOf: dynamicContent['default_services_list_count_of'],
     serviceListStringServices:
       dynamicContent['default_services_list_count_services'],
     mapTab: dynamicContent['default_service_map_map_tab'],
     listTab: dynamicContent['default_service_map_list_tab'],
-    allRegionsOption: dynamicContent['DEFAULT_SERVICE_MAP_ALL_REGIONS_OPTION'],
-    allCitiesOption: dynamicContent['DEFAULT_SERVICE_MAP_ALL_CITIES_OPTION'],
-    allCategoriesOption:
-      dynamicContent['DEFAULT_SERVICE_MAP_ALL_CATEGORIES_OPTION'],
-    myLocationOption: dynamicContent['default_service_map_my_location_option'],
     allServicesTypeOption: dynamicContent['default_all_services_type_option'],
     allProvidersOption: dynamicContent['default_all_providers_option'],
     allPopulationsOption: dynamicContent['default_all_populations_option'],
     allAccessibilitiesOption:
       dynamicContent['default_all_accessibilities_option'],
-    distanceAwayStrings: {
-      informationTooltip: dynamicContent['default_distance_away_tooltip'],
-    },
     popupStrings: populatePopupStrings(dynamicContent),
+    distanceAwayStrings: { informationTooltip: '' },
     labelSearchInput: { label: dynamicContent['default_seach_input_text'] },
+    labelAccessibility: dynamicContent['default_accessibility_label'],
+    labelPopulations: dynamicContent['default_populations_label'],
+    labelProvider: dynamicContent['default_providers_label'],
+    labelServicesTypes: dynamicContent['default_service_type_label'],
   };
 }
 
