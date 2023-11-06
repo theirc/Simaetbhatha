@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import { Head, Html, Main, NextScript } from 'next/document';
 
 function Document() {
@@ -23,12 +24,12 @@ function Document() {
           id="rs_req_Init"
           defer
         ></script>
-        {/*
-        TODO: get API Key from your Product manager, update src and uncomment the script.
         <script
           id="ze-snippet"
-          src="https://static.zdassets.com/ekr/snippet.js?key=37922dda-c8d9-441f-9a01-449297f3bb32"
-          async> </script>*/}
+          src="https://static.zdassets.com/ekr/snippet.js?key=40a047e8-0ec2-4df4-aca3-d9c570d347cc"
+        >
+          {' '}
+        </script>
 
         <link rel="manifest" href="/manifest.json" />
         <link rel="apple-touch-icon" href="/icon.png"></link>
