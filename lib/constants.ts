@@ -58,6 +58,8 @@ export const GOOGLE_ANALYTICS_IDS = [
 // https://www.algolia.com/account/api-keys/
 export const ALGOLIA_SEARCH_APP_ID = 'BWATZIXLX6';
 export const ALGOLIA_SEARCH_API_KEY = '0d9093280e7b2bc2b6ca12ed4180fd0a';
+export const ALGOLIA_SEARCH_API_KEY_WRITE =
+  process.env.ALGOLIA_SEARCH_API_KEY_WRITE ?? '';
 
 export const ALGOLIA_ARTICLE_INDEX_NAME = 'zendesk_signpost-iraq_articles';
 export const ALGOLIA_QUERY_INDEX_NAME =
