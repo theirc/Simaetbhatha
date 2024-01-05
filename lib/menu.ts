@@ -25,6 +25,11 @@ export function getFooterItems(
   let items: MenuOverlayItem[] = [];
   items.push({ key: 'home', label: strings.home, href: '/' });
   items.push({
+    key: 'services',
+    label: strings.services, // Make sure this string is defined in your strings object
+    href: '/#service-map',
+  });
+  items.push({
     key: 'about',
     label: strings.about,
     href: `/articles/${ABOUT_US_ARTICLE_ID}`,
