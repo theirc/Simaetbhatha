@@ -16,6 +16,7 @@ import {
 export interface CustomMenuOverlayStrings extends MenuOverlayStrings {
   information: string;
   about: string;
+  services: string;
 }
 
 export function getFooterItems(
@@ -28,6 +29,11 @@ export function getFooterItems(
     key: 'about',
     label: strings.about,
     href: `/articles/${ABOUT_US_ARTICLE_ID}`,
+  });
+  items.push({
+    key: 'services',
+    label: strings.services, // Make sure this string is defined in your strings object
+    href: '/#service-map',
   });
   for (let category of categories as ZendeskCategory[]) {
     if (category.id === 1500002090382) {
@@ -55,6 +61,11 @@ export function getMenuItems(
       href: `/articles/${ABOUT_US_ARTICLE_ID}`,
     });
   }
+  items.push({
+    key: 'services',
+    label: strings.services, // Make sure this string is defined in your strings object
+    href: '/#service-map',
+  });
 
   if (USE_CAT_SEC_ART_CONTENT_STRUCTURE) {
     addMenuItemsCategories(items, categories as CategoryWithSections[]);
