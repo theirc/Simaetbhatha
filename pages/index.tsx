@@ -204,7 +204,6 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const providers = await getDirectusProviders(
     directus,
     DIRECTUS_COUNTRY_ID,
-    uniqueProvidersIdsArray
   );
   const populations = await getDirectusPopulationsServed(
     uniquePopulationsIdsArray,
