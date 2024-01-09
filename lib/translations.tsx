@@ -27,6 +27,7 @@ export const COMMON_DYNAMIC_CONTENT_PLACEHOLDERS = [
   'default_menu_home_title',
   'default_information_title',
   'default_menu_about_title',
+  'default_menu_services_title',
   // Cookie banner strings.
   'default_cookie_banner',
   'default_accept',
@@ -292,6 +293,7 @@ export function populateMenuOverlayStrings(dynamicContent: {
     home: dynamicContent['default_menu_home_title'],
     information: dynamicContent['default_information_title'],
     about: dynamicContent['default_menu_about_title'],
+    services: dynamicContent['default_menu_services_title'],
   };
 }
 
